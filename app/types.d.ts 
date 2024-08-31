@@ -1,0 +1,12 @@
+
+export interface SyllabusChapterContent {
+  [chapter: string]: string;
+}
+
+export interface SyllabusGrade {
+  [subject: string]: SyllabusChapterContent;
+}
+
+export interface Syllabus {
+  [grade: string]: SyllabusGrade;
+}
