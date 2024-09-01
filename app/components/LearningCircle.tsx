@@ -11,7 +11,7 @@ const LearningCircleTab: React.FC = () => {
         <div className="relative w-full h-64">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/watch?v=Sul37_e3pxE"
+            src="https://www.youtube.com/embed/Sul37_e3pxE" // Fixed URL
             title="Horizontal Video"
             allowFullScreen
           />
@@ -21,7 +21,7 @@ const LearningCircleTab: React.FC = () => {
         <div className="relative w-full h-96 md:h-auto">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://youtu.be/--dKzquting?si=Q7P1b6kMHbs9xWKg"
+            src="https://www.youtube.com/embed/--dKzquting" // Fixed URL
             title="Vertical Video"
             allowFullScreen
           />
@@ -33,7 +33,7 @@ const LearningCircleTab: React.FC = () => {
         <div className="relative w-full h-48">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://youtube.com/shorts/P5ZJmu93mC0?si=r9BcMa5yE7kmanE4"
+            src="https://www.youtube.com/embed/P5ZJmu93mC0" // Fixed URL
             title="Video 1"
             allowFullScreen
           />
@@ -41,7 +41,7 @@ const LearningCircleTab: React.FC = () => {
         <div className="relative w-full h-48">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://youtu.be/pY7MSS66mfU?si=EmY8oEPzAkW0T28L"
+            src="https://www.youtube.com/embed/pY7MSS66mfU" // Fixed URL
             title="Video 2"
             allowFullScreen
           />
@@ -49,7 +49,7 @@ const LearningCircleTab: React.FC = () => {
         <div className="relative w-full h-48">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://youtu.be/m-T2gHcKAIU?si=VUVHnt1erdtccjSe"
+            src="https://www.youtube.com/embed/m-T2gHcKAIU" // Fixed URL
             title="Video 3"
             allowFullScreen
           />
