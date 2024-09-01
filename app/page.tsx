@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faRobot } from '@fortawesome/free-solid-svg-icons';
 import Sidebar from './components/Sidebar';
 import TextInputBox from './components/TextInputBox';
 import LearningCircleTab from './components/LearningCircle';
@@ -11,7 +13,7 @@ import Profile from "./components/profile";
 const HomePage = () => {
   const [responses, setResponses] = useState<string[]>([]);
   const [showGreeting, setShowGreeting] = useState(true);
-  const [activeTab, setActiveTab] = useState<'home' | 'profile' | 'community' | 'learningCircle'| 'quizzes'>('home');
+  const [activeTab, setActiveTab] = useState<'home' | 'profile' | 'community' | 'learningCircle' | 'quizzes'>('home');
 
   const handleTextSubmit = async (inputText: string) => {
     if (showGreeting) setShowGreeting(false);
@@ -61,7 +63,7 @@ const HomePage = () => {
                   className={`flex ${response.startsWith('You:') ? 'justify-end' : 'justify-start'} mb-4`}
                 >
                   <div
-                    className={`max-w-xs p-3 rounded-t-lg rounded-${response.startsWith('You:') ? 'bl' : 'br'}-lg ${
+                    className={`flex items-center max-w-xs p-3 rounded-t-lg rounded-${response.startsWith('You:') ? 'bl' : 'br'}-lg ${
                       response.startsWith('You:')
                         ? 'bg-gray-300 text-black'
                         : 'bg-blue-200 text-black'
@@ -71,17 +73,20 @@ const HomePage = () => {
                       maxWidth: response.startsWith('Kutty:') ? '100%' : '60%',
                     }}
                   >
+                    <FontAwesomeIcon
+                      icon={response.startsWith('You:') ? faUser : faRobot}
+                      className="mr-2"
+                    />
                     {response}
                   </div>
                 </div>
               ))}
             </>
           )}
-          {activeTab === 'profile' && <Profile/>}
+          {activeTab === 'profile' && <Profile />}
           {activeTab === 'community' && <CommunityTab />}
           {activeTab === 'learningCircle' && <LearningCircleTab />}
           {activeTab === 'quizzes' && <QuizzesAndScoreboard />}
-
         </div>
 
         {/* Render TextInputBox only on Home tab */}
