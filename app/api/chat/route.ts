@@ -3,7 +3,7 @@
 
 import { NextResponse } from 'next/server';
 import { GoogleGenerativeAI } from '@google/generative-ai';
-const apiKey = 'AIzaSyD9e166K2JLrsj3k7dyReWoSMKPZEjvxbU';
+const apiKey = ;
 
 const genAI = new GoogleGenerativeAI(apiKey);
 
